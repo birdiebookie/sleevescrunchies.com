@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sleeve Scrunchies® | The Original Sleeve Holder</title>
+<meta name="description" content="Sleeve Scrunchies® — The original sleeve holder. Over 9 million sold. Shop soccer, softball and volleyball Sleeve Scrunchies and athletic headbands.">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+    background: #fff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    white-space: nowrap;
+}
+
+.logo span {
+    font-size: 12px;
+    vertical-align: top;
+    margin-left: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.shop-button {
+    background: #111;
+    color: #fff;
+    padding: 11px 18px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 70px 20px 55px;
+    background: linear-gradient(to bottom, #fff, #f7f7f7);
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(42px, 7vw, 78px);
+    line-height: .95;
+    font-weight: 1000;
+    letter-spacing: -4px;
+}
+
+.hero-tagline {
+    margin: 25px 0 8px;
+    font-size: clamp(24px, 4vw, 42px);
+    font-weight: 1000;
+    letter-spacing: -1px;
+}
+
+.hero-subtag {
+    margin: 0 auto 24px;
+    font-size: clamp(18px, 3vw, 27px);
+    font-weight: 800;
+}
+
+.hero-description {
+    max-width: 650px;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.million {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 12px 22px;
+    border: 2px solid #111;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+/* SPORT NAV */
+.sports {
+    max-width: 1200px;
+    margin: auto;
+    padding: 55px 20px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 1000;
+    margin: 0 0 30px;
+}
+
+.sport-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.sport-card {
+    min-height: 150px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    text-align: center;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.sport-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+.sport-card h2 {
+    margin: 0 0 7px;
+    font-size: 28px;
+    font-weight: 1000;
+}
+
+.sport-card p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.soccer {
+    background: #eef5ff;
+}
+
+.softball {
+    background: #fff4c7;
+}
+
+.volleyball {
+    background: #f1f1f1;
+}
+
+/* PRODUCTS */
+.products {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.product-section {
+    margin-bottom: 75px;
+}
+
+.product-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 2px solid #111;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+}
+
+.product-heading h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 1000;
+}
+
+.product-heading span {
+    font-size: 14px;
+    font-weight: 700;
+    color: #666;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(0,0,0,.1);
+}
+
+.product-image {
+    height: 210px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.photo-placeholder {
+    color: #aaa;
+    font-size: 13px;
+    text-align: center;
+    padding: 20px;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-info h3 {
+    margin: 0 0 5px;
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.product-info p {
+    margin: 0 0 13px;
+    color: #666;
+    font-size: 13px;
+}
+
+.buy-button {
+    display: inline-block;
+    background: #111;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* BRAND STORY */
+.story {
+    background: #111;
+    color: #fff;
+    padding: 75px 20px;
+    text-align: center;
+}
+
+.story-inner {
+    max-width: 800px;
+    margin: auto;
+}
+
+.story h2 {
+    margin: 0 0 20px;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 1000;
+}
+
+.story p {
+    margin: 0 auto 18px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #ddd;
+}
+
+.story-highlight {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+/* FOOTER */
+footer {
+    background: #050505;
+    color: #aaa;
+    text-align: center;
+    padding: 35px 20px;
+    font-size: 13px;
+}
+
+footer strong {
+    color: #fff;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+
+    .header-inner {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .shop-button {
+        padding: 9px 14px;
+    }
+
+    .hero {
+        padding: 50px 18px 40px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .sport-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .product-image {
+        height: 160px;
+    }
+
+    .product-heading {
+        display: block;
+    }
+
+    .product-heading span {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .story {
+        padding: 55px 20px;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product-image {
+        height: 135px;
+    }
+
+    .product-info h3 {
+        font-size: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+        <a href="#" class="logo">SLEEVE SCRUNCHIES<span>®</span></a>
+
+        <nav>
+            <a href="#soccer">SOCCER</a>
+            <a href="#softball">SOFTBALL</a>
+            <a href="#volleyball">VOLLEYBALL</a>
+            <a href="#headbands">HEADBANDS</a>
+        </nav>
+
+        <a href="#sports" class="shop-button">SHOP</a>
+    </div>
+</header>
+
+<section class="hero">
+
+    <h1>SLEEVE SCRUNCHIES®</h1>
+
+    <div class="hero-tagline">
+        SUNS OUT. GUNS OUT.
+    </div>
+
+    <div class="hero-subtag">
+        YOU HAVE THE RIGHT TO BARE ARMS.
+    </div>
+
+    <p class="hero-description">
+        The original sleeve holder designed for athletes who want to
+        keep their sleeves up, stay cool and play without distractions.
+    </p>
+
+    <div class="million">
+        OVER 9 MILLION SOLD
+    </div>
+
+</section>
+
+<section class="sports" id="sports">
+
+    <h2 class="section-title">SHOP BY SPORT</h2>
+
+    <div class="sport-grid">
+
+        <a href="#soccer" class="sport-card soccer">
+            <h2>⚽ SOCCER</h2>
+            <p>Shop Soccer Sleeve Scrunchies</p>
+        </a>
+
+        <a href="#softball" class="sport-card softball">
+            <h2>🥎 SOFTBALL</h2>
+            <p>Shop Softball Sleeve Scrunchies</p>
+        </a>
+
+        <a href="#volleyball" class="sport-card volleyball">
+            <h2>🏐 VOLLEYBALL</h2>
+            <p>Shop Volleyball Sleeve Scrunchies</p>
+        </a>
+
+    </div>
+
+</section>
+
+<section class="products">
+
+    <!-- SOCCER -->
+    <div class="product-section" id="soccer">
+
+        <div class="product-heading">
+            <h2>⚽ SOCCER SLEEVE SCRUNCHIES</h2>
+            <span>Choose your color</span>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOCCER BLACK<br>Amazon photo goes here</div>
+                </div>
+                <div class="product-info">
+                    <h3>Black</h3>
+                    <p>Soccer Sleeve Scrunchies</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOCCER NAVY<br>Amazon photo goes here</div>
+                </div>
+                <div class="product-info">
+                    <h3>Navy</h3>
+                    <p>Soccer Sleeve Scrunchies</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOCCER ROYAL<br>Amazon photo goes here</div>
+                </div>
+                <div class="product-info">
+                    <h3>Royal</h3>
+                    <p>Soccer Sleeve Scrunchies</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOCCER RED<br>Amazon photo goes here</div>
+                </div>
+                <div class="product-info">
+                    <h3>Red</h3>
+                    <p>Soccer Sleeve Scrunchies</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOCCER NEON GREEN<br>Amazon photo goes here</div>
+                </div>
+                <div class="product-info">
+                    <h3>Neon Green</h3>
+                    <p>Soccer Sleeve Scrunchies</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOCCER PURPLE<br>Amazon photo goes here</div>
+                </div>
+                <div class="product-info">
+                    <h3>Purple</h3>
+                    <p>Soccer Sleeve Scrunchies</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOCCER WHITE / BLACK<br>Amazon photo goes here</div>
+                </div>
+                <div class="product-info">
+                    <h3>White / Black</h3>
+                    <p>Soccer Sleeve Scrunchies</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOCCER PINK<br>Amazon photo goes here</div>
+                </div>
+                <div class="product-info">
+                    <h3>Pink</h3>
+                    <p>Soccer Sleeve Scrunchies</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOCCER TIE DYE<br>Amazon photo goes here</div>
+                </div>
+                <div class="product-info">
+                    <h3>Tie Dye</h3>
+                    <p>Soccer Sleeve Scrunchies</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SOFTBALL -->
+    <div class="product-section" id="softball">
+
+        <div class="product-heading">
+            <h2>🥎 SOFTBALL SLEEVE SCRUNCHIES</h2>
+            <span>Choose your color</span>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOFTBALL BLACK<br>Amazon photo goes here</div>
+                </div>
+                <div class="product-info">
+                    <h3>Black</h3>
+                    <p>Softball Sleeve Scrunchies</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOFTBALL ROYAL<br>Amazon photo goes here</div>
+                </div>
+                <div class="product-info">
+                    <h3>Royal</h3>
+                    <p>Softball Sleeve Scrunchies</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOFTBALL RED<br>Amazon photo goes here</div>
+                </div>
+                <div class="product-info">
+                    <h3>Red</h3>
+                    <p>Softball Sleeve Scrunchies</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOFTBALL WHITE<br>Amazon photo goes here</div>
+                </div>
+                <div class="product-info">
+                    <h3>White</h3>
+                    <p>Softball Sleeve Scrunchies</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOFTBALL PINK<br>Amazon photo goes here</div>
+                </div>
+                <div class="product-info">
+                    <h3>Pink</h3>
+                    <p>Softball Sleeve Scrunchies</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOFTBALL TIE DYE<br>Amazon photo goes here</div>
+                </div>
+                <div class="product-info">
+                    <h3>Tie Dye</h3>
+                    <p>Softball Sleeve Scrunchies</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- VOLLEYBALL -->
+    <div class="product-section" id="volleyball">
+
+        <div class="product-heading">
+            <h2>🏐 VOLLEYBALL SLEEVE SCRUNCHIES</h2>
+            <span>Built for the court</span>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">VOLLEYBALL BLACK<br>Amazon photo goes here</div>
+                </div>
+                <div class="product-info">
+                    <h3>Black</h3>
+                    <p>Volleyball Sleeve Scrunchies</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- HEADBANDS -->
+    <div class="product-section" id="headbands">
+
+        <div class="product-heading">
+            <h2>ATHLETIC HEADBANDS</h2>
+            <span>Stay focused. Stay in place.</span>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOFTBALL HEADBAND<br>YELLOW / RED STITCHING</div>
+                </div>
+                <div class="product-info">
+                    <h3>Softball</h3>
+                    <p>Yellow / Red Stitching</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOFTBALL HEADBAND<br>TIE DYE</div>
+                </div>
+                <div class="product-info">
+                    <h3>Softball</h3>
+                    <p>Tie Dye</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOCCER HEADBAND<br>BLACK</div>
+                </div>
+                <div class="product-info">
+                    <h3>Soccer</h3>
+                    <p>Black</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOCCER HEADBAND<br>ROYAL</div>
+                </div>
+                <div class="product-info">
+                    <h3>Soccer</h3>
+                    <p>Royal</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOCCER HEADBAND<br>RED</div>
+                </div>
+                <div class="product-info">
+                    <h3>Soccer</h3>
+                    <p>Red</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="photo-placeholder">SOCCER HEADBAND<br>WHITE</div>
+                </div>
+                <div class="product-info">
+                    <h3>Soccer</h3>
+                    <p>White</p>
+                    <a href="#" class="buy-button">SHOP NOW</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section class="story">
+
+    <div class="story-inner">
+
+        <h2>THE ORIGINAL SLEEVE HOLDER.</h2>
+
+        <p>
+            Sleeve Scrunchies® were created to give athletes a simple
+            way to keep their sleeves up and their arms free.
+        </p>
+
+        <p>
+            Invented in the USA and trusted by athletes for more than
+            25 years.
+        </p>
+
+        <div class="story-highlight">
+            OVER 9 MILLION SOLD.
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <strong>SLEEVE SCRUNCHIES®</strong><br><br>
+    The Original Sleeve Holder<br>
+    © 2026 Flexer Sports Inc. All Rights Reserved.
+</footer>
+
+</body>
+</html>
